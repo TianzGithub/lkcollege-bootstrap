@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <div data-name="周杰伦" data-age="18"></div>
+  <button id="btn">提交数据</button>
+  <button id="btn1">设置数据</button>
+  <script src="../lib/jquery/jquery.min.js"></script>
+  <script>
+    $(function () {
+      $('#btn').on('click', function () {
+        console.log($('div').data('name'));
+        console.log($('div').data('age'));
+      })
+      $('#btn1').on('click', function () {
+        $('div').data('name', '张艺兴');
+        $('div').data('age', '30');
+      })
+    })
+  </script>
+</body>
+
+</html>
